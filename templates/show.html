@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>data</title>
+    <style>
+        td,th {
+            padding: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1><u>: Patient Data :</u></h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Place</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Cheif_complaint</th>
+                <th>past_medical_history</th>
+                <th>past_dental_visit</th>
+                <th>personal_habits</th>
+                <th>tooth_number</th>
+                <th>decayed</th>
+                <th>missing</th>
+                <th>filled</th>
+                <th>pain</th>
+                <th>fractured</th>
+                <th>mobility </th>
+                <th>others</th>
+                <th>gingiva</th>
+                <th>description</th>
+                <th>dental_fluorosis</th>
+                <th>malocclusion</th>
+                <th>oral_muscosal_lesion</th>
+                <th>condition</th>
+                <th>location</th>
+                <th>treatment_done</th>
+                <th>expalnation</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <td>{{ row[6] }}</td>
+                <td>{{ row[7] }}</td>
+                <td>{{ row[8] }}</td>
+                <td>{{ row[9] }}</td>
+                <td>{{ row[10] }}</td>
+                <td>{{ row[11] }}</td>
+                <td>{{ row[12] }}</td>
+                <td>{{ row[13] }}</td>
+                <td>{{ row[14] }}</td>
+                <td>{{ row[15] }}</td>
+                <td>{{ row[16] }}</td>
+                <td>{{ row[17] }}</td>
+                <td>{{ row[18] }}</td>
+                <td>{{ row[19] }}</td>
+                <td>{{ row[20] }}</td>
+                <td>{{ row[21] }}</td>
+                <td>{{ row[22] }}</td>
+                <td>{{ row[23] }}</td>
+                <td>{{ row[24] }}</td>
+                <td>{{ row[25] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

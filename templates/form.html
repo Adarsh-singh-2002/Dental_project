@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="bro2">
+      <form class="form" action="/submit-form" method  = "POST">
+        
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <label >ID:</label>
+                    <input type="text" /></div>
+                
+                <div class="col-3"><label>Date</label>
+                   
+                    <input type="date" name = "date"/></div>
+                <div class="col"><label htmlFor="">Place</label>
+                    <input type="text" name="place" /></div>
+            </div>
+          
+          <br />
+          <label htmlFor="">Name</label>
+          <br />
+          <input type="text" name="name"/>
+          <br />
+          <br>
+          <label >Gender</label>
+          <br />
+          <div class="row">
+            <div class="col-2"><input type="radio" id="gender1" name="gender" value="M" />
+                <label for="gender1">Male</label></div>
+            <div class="col-2"><input type="radio" id="gender2" name="gender" value="F" />
+                <label for="gender2">Female</label></div>
+            <div class="col-2"><input type="radio" id="gender3" name="gender" value="N" />
+                <label for="gender3">Others</label></div>
+        </div>
+          <br></br>
+          <label name = "complaint">Chief Complaint</label>
+          <br />
+          <textarea rows="4" cols="50" name="complaint" form="usrform"></textarea>
+          <br />
+          <br>
+          <label >Past Medical History</label>
+          <br />
+          <select id="history1" name="history">
+            <option value="Diabetes">Diabetes</option>
+            <option value="Hypertention">Hypertention</option>
+            <option value="Thyroid">Thyroid disorders</option>
+            <option value="Cardiovascular">Cardiovascular diseases</option>
+            <option value="Respiratory">Respiratory diseases</option>
+            <option value="Bleeding">Bleeding disorders</option>
+            <option value="Others">Others</option>
+          </select>
+          <br />
+          <br>
+          <label htmlFor="">Past Dental Visit</label>
+          <br />
+          <input type="radio" id="visit1" name="visit" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="visit" value="No" />
+          <label for="visit2">No</label>
+          <br />
+          <br>
+          <label>Personal Habits</label>
+          <br />
+          <div class="row">
+            <div class="col-2"><input type="radio" id="gender1" name="habits" value="Smoking" />
+                <label for="smoking">Smoking</label></div>
+            <div class="col-2"><input type="radio" id="gender2" name="habits" value="Alcohol" />
+                <label for="alcohol">Alcohol</label></div>
+            <div class="col-2"><input type="radio" id="gender3" name="habits" value="None" />
+                <label for="Nothing">Nothing</label></div>
+        </div>
+          <!-- <input type="checkbox" id="smoking" name="habits" value="smoking" />
+          <label for="vehicle1"> Smoking</label>
+          <br />
+          <input
+            type="checkbox"
+            id="smokeless"
+            class = "modi"
+            name="habits"
+            value="smokeless"
+          />
+          <label for="vehicle2"> Smoke-less</label>
+          <br />
+          <input type="checkbox" class = "modi" id="alcohol" name="habits" value="alcohol" />
+          <label > Alcohol</label>-->
+          <br></br>
+
+          <div class="row">
+
+            <div class="row">
+                <div class="col"><label>Tooth number</label></div>
+                <div class="col"><input type="text"name = "toothnumber"/></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col"><label htmlFor="">Decayed:</label></div>
+                <div class="col"><input type="text" name="decayed" /></div>
+            </div>
+            <div class="row">
+                <div class="col"><label htmlFor="">Missing:</label></div>
+                <div class="col"><input type="text" name="missing"/></div>
+            </div>
+            <div class="row">
+                <div class="col"><label htmlFor="">Filled:</label></div>
+                <div class="col"><input type="text" name = "filled"/></div>
+            </div>
+            <div class="row">
+                <div class="col"><label htmlFor="">Pain:</label></div>
+                <div class="col"><input type="text" name="pain"/></div>
+            </div>
+            <div class="row">
+                <div class="col"><label htmlFor="">Fracture:</label></div>
+                <div class="col"><input type="text" name="fractured"/></div>
+            </div>
+            <div class="row">
+                <div class="col"><label htmlFor="">Mobility: </label></div>
+                <div class="col"><input type="text" name="mobility"/></div>
+            </div>
+            
+
+
+          </div>
+          
+          <label htmlFor="">Others:</label>
+          <br />
+          <textarea rows="4" cols="50" form="usrform" name="others"></textarea>
+          <br />
+          <br />
+          <div class="row">
+            <div class="col-2"><label htmlFor="">Gingiva</label></div>
+            <div class="col"><select id="history" name="gingiva">
+                <option value="Calculus">Calculus:</option>
+                <option value="Stains">Stains:</option>
+                <option value="Generalized chronic gingivitis">Generalized chronic gingivitis:</option>
+                <option value="periodontitis">
+                  Generalized chronic periodontitis:
+                </option>
+                <option value="others">Others:</option>
+              </select></div>
+          </div>
+          
+          
+          
+          <br />
+          <label htmlFor="">Description</label>
+          <br />
+          <textarea rows="4" cols="50" name="comment" form="usrform" ></textarea>
+          <br />
+          <br>
+          <label htmlFor="">Dental Fluorosis</label>
+          <br />
+          <input type="radio" id="visit1" name="floro" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="floro" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+          <br>
+          <label htmlFor="">Malocclusion</label>
+          <br />
+          <input type="radio" id="visit1" name="malo" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="malo" value="No" />
+          <label for="visit2">No</label>
+          <br />
+          <br>
+          <label htmlFor="">Oral mucosal lesion</label>
+          <br />
+          <input type="radio" id="visit1" name="masc" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="masc" value="No" />
+          <label for="visit2">No</label>
+          <br />
+          <br>
+          <label htmlFor="">Condition</label>
+          <br />
+          <textarea rows="4" cols="50" name="condition" form="usrform" ></textarea>
+          <br />
+          <br>
+          <label htmlFor="">Location</label>
+          <br />
+          <textarea rows="4" cols="50" name="location" form="usrform" ></textarea>
+          <br />
+          <label htmlFor="">Treatment done</label>
+          <br />
+          <select id="history" name="treatment">
+            <option value="Diabetes">Medication:</option>
+            <option value="Hypertention">Referral:</option>
+            <option value="Thyroid">Scaling:</option>
+            <option value="Cardiovascular">Extraction:</option>
+            <option value="Respiratory">Filling:</option>
+          </select>
+          <br />
+          <br>
+          <textarea rows="4" cols="50" name="explanation" form="usrform" ></textarea>
+          <br />
+          <br>
+          <br>
+          <!-- <input class="submit" type="submit" value="Submit"></input> -->
+          <button type="submit"> Submit </button>
+        </div>
+      </form>
+    </div>
+</body>
+</html>

@@ -1,152 +1,160 @@
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    padding: 5rem;
-    border-radius: 1rem;
-    color: rgb(18, 103, 103);
-  }
-  
-  .bro2 {
-    background-color: rgb(18, 103, 103);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  label {
-    font-weight: 600;
-    font-size: 1.2rem;
-  }
-  
-  .submit {
-    background-color: rgb(18, 103, 103);
-    color: white;
-    border: none;
-    font-size: 1.7rem;
-    border-radius: 0.3rem;
-    padding: 0.2rem 2rem;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-  
-  textarea {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid black;
-  }
-  
-  /* Small devices (phones, 576px and below) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 5rem;
+  border-radius: 1rem;
+  color: rgb(18, 103, 103);
+}
+
+.form-check-input[type="radio"] {
+  height: 1.3em;
+  width: 1.3em;
+  background-color: rgb(241, 233, 233);
+  border-radius: 50%;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+.bro2 {
+  background-color: rgb(18, 103, 103);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.submit {
+  background-color: rgb(18, 103, 103);
+  color: white;
+  border: none;
+  font-size: 1.7rem;
+  border-radius: 0.3rem;
+  padding: 0.2rem 2rem;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+textarea {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/* Small devices (phones, 576px and below) */
 @media only screen and (max-width: 576px) {
-  /* Set the width of the form to 100% */
-  form {
-    width: 100%;
-  }
-  
-  /* Reduce the width of the input fields and increase the font size */
-  input[type="text"], input[type="email"], input[type="password"], select, textarea {
-    width: 100%;
-    font-size: 18px;
-  }
-  
-  /* Reduce the font size of the labels */
-  label {
-    font-size: 16px;
-  }
-  
-  /* Reduce the width of the buttons and adjust the font size and padding */
-  button, input[type="submit"] {
-    width: 100%;
-    font-size: 18px;
-    padding: 10px;
-  }
+/* Set the width of the form to 100% */
+form {
+  width: 100%;
+}
+
+/* Reduce the width of the input fields and increase the font size */
+input[type="text"], input[type="email"], input[type="password"], select, textarea {
+  width: 100%;
+  font-size: 18px;
+}
+
+/* Reduce the font size of the labels */
+label {
+  font-size: 16px;
+}
+
+/* Reduce the width of the buttons and adjust the font size and padding */
+button, input[type="submit"] {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+}
 }
 
 /* Medium devices (tablets, 768px and below) */
 @media only screen and (max-width: 768px) {
-  /* Use two columns for the form */
-  form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
-  
-  /* Set the width of the input fields to 100% */
-  input[type="text"], input[type="email"], input[type="password"], select, textarea {
-    width: 100%;
-  }
-  
-  /* Adjust the font size and padding of the buttons */
-  button, input[type="submit"] {
-    font-size: 20px;
-    padding: 15px;
-  }
-  .modi
-  {
-    margin-bottom: 0px;
-  }
+/* Use two columns for the form */
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+/* Set the width of the input fields to 100% */
+/* input[type="text"], input[type="email"], input[type="password"], select, textarea {
+  width: 100%;
+} */
+
+/* Adjust the font size and padding of the buttons */
+button, input[type="submit"] {
+  font-size: 20px;
+  padding: 15px;
+}
+.modi
+{
+  margin-bottom: 0px;
+}
 }
 
 /* Large devices (desktops, 992px and below) */
 @media only screen and (max-width: 992px) {
-  /* Use two columns for the form */
-  form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
+/* Use two columns for the form */
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
 }
 
 /* Extra large devices (large desktops, 1200px and above) */
 @media only screen and (min-width: 1200px) {
-  /* Use three columns for the form */
-  form {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-  }
-  
+/* Use three columns for the form */
+form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 
-  /* Styles for desktop screens */
+}
+
+/* Styles for desktop screens */
 /* .form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 800px;
-  margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+max-width: 800px;
+margin: 0 auto;
 }
 
 .form input {
-  width: 45%;
+width: 45%;
 }
 
 .form textarea {
-  width: 100%;
+width: 100%;
 } */
 
 /* Styles for tablet screens */
 @media only screen and (max-width: 768px) {
-  .form {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .form input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+.form {
+  flex-direction: column;
+  align-items: center;
+}
+
+.form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
 }
 
 /* Styles for mobile screens */
 @media only screen and (max-width: 480px) {
-  .form input,
-  .form textarea {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+.form input,
+.form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
 }

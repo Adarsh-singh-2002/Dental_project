@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/static/css/style1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div class="bro2">
@@ -15,205 +15,470 @@
         
         
         <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <label >ID:</label>
-                    <input type="text" /></div>
-                
-                <div class="col-3"><label>Date</label>
-                   
-                    <input type="date" name = "date"/></div>
-                <div class="col"><label htmlFor="">Place</label>
-                    <input type="text" name="place" /></div>
-            </div>
-          
-          <br />
-          <label htmlFor="">Name</label>
-          <br />
-          <input type="text" name="name"/>
-          <br />
-          <br>
-          <label >Gender</label>
-          <br />
+             
           <div class="row">
-            <div class="col-2"><input type="radio" id="gender1" name="gender" value="M" />
-                <label for="gender1">Male</label></div>
-            <div class="col-2"><input type="radio" id="gender2" name="gender" value="F" />
-                <label for="gender2">Female</label></div>
-            <div class="col-2"><input type="radio" id="gender3" name="gender" value="N" />
-                <label for="gender3">Others</label></div>
-        </div>
-          <br></br>
-          <label name = "complaint">Chief Complaint</label>
-          <br />
-          <textarea rows="4" cols="50" name="complaint" form="usrform"></textarea>
-          <br />
-          <br>
-          <label >Past Medical History</label>
-          <br />
-          <select id="history1" name="history">
-            <option value="Diabetes">Diabetes</option>
-            <option value="Hypertention">Hypertention</option>
-            <option value="Thyroid">Thyroid disorders</option>
-            <option value="Cardiovascular">Cardiovascular diseases</option>
-            <option value="Respiratory">Respiratory diseases</option>
-            <option value="Bleeding">Bleeding disorders</option>
-            <option value="Others">Others</option>
-          </select>
-          <br />
-          <br>
-          <label htmlFor="">Past Dental Visit</label>
-          <br />
-          <input type="radio" id="visit1" name="visit" value="Yes" />
-          <label for="visit1">Yes</label>
-          <br />
-          <input type="radio" id="visit2" name="visit" value="No" />
-          <label for="visit2">No</label>
-          <br />
-          <br>
-          <label>Personal Habits</label>
-          <br />
-          <div class="row">
-            <div class="col-2"><input type="radio" id="gender1" name="habits" value="Smoking" />
-                <label for="smoking">Smoking</label></div>
-            <div class="col-2"><input type="radio" id="gender2" name="habits" value="Alcohol" />
-                <label for="alcohol">Alcohol</label></div>
-            <div class="col-2"><input type="radio" id="gender3" name="habits" value="None" />
-                <label for="Nothing">Nothing</label></div>
-        </div>
-          <!-- <input type="checkbox" id="smoking" name="habits" value="smoking" />
-          <label for="vehicle1"> Smoking</label>
-          <br />
-          <input
-            type="checkbox"
-            id="smokeless"
-            class = "modi"
-            name="habits"
-            value="smokeless"
-          />
-          <label for="vehicle2"> Smoke-less</label>
-          <br />
-          <input type="checkbox" class = "modi" id="alcohol" name="habits" value="alcohol" />
-          <label > Alcohol</label>-->
-          <br></br>
-
-          <div class="row">
-
-            <div class="row">
-                <div class="col"><label>Tooth number</label></div>
-                <div class="col"><input type="text"name = "toothnumber"/></div>
+            <div class="col-sm-2">
+              <label for="" ><b>Organised By:</b></label>
             </div>
             <br>
-            <div class="row">
-                <div class="col"><label htmlFor="">Decayed:</label></div>
-                <div class="col"><input type="text" name="decayed" /></div>
+            <div class="col-sm-3">
+              <select id="history" name="department" required onchange="toggleOrganisedByInput()">
+                <option value="camp">Public Health Dentistry:</option>
+                <option value="Others">Others:</option>
+                </select>
+              <br>
+              <label htmlFor="">Department</label>
+              <input type="text" id="Organised_By" name="Organised_By" class="form-control" style="display: none;"/>
+              
+              <br/>
             </div>
-            <div class="row">
-                <div class="col"><label htmlFor="">Missing:</label></div>
-                <div class="col"><input type="text" name="missing"/></div>
-            </div>
-            <div class="row">
-                <div class="col"><label htmlFor="">Filled:</label></div>
-                <div class="col"><input type="text" name = "filled"/></div>
-            </div>
-            <div class="row">
-                <div class="col"><label htmlFor="">Pain:</label></div>
-                <div class="col"><input type="text" name="pain"/></div>
-            </div>
-            <div class="row">
-                <div class="col"><label htmlFor="">Fracture:</label></div>
-                <div class="col"><input type="text" name="fractured"/></div>
-            </div>
-            <div class="row">
-                <div class="col"><label htmlFor="">Mobility: </label></div>
-                <div class="col"><input type="text" name="mobility"/></div>
-            </div>
+          <!-- <label for="firstField">First Field:</label>
+    <select id="firstField" onchange="toggleField()">
+    <option value="">Select an option</option>
+    <option value="specificValue">Specific Value</option>
+    <option value="otherValue">Other Value</option>
+  </select>
+
+  <br><br>
+
+  <div id="secondField" style="display: none;">
+    <label for="secondField">Second Field:</label>
+    <input type="text" id="secondField" name="secondField">
+  </div> -->
+
             
+          </div>
+            <br>
+            <div class="row">
+                
+                <div class="col-3"><label><b>Date : </b></label>
+                   
+                    <input type="date" name = "date" required/>
+                </div>
 
+                <div class="col"><label htmlFor=""><b>Place : </b></label>
+                    <input type="text" name="place" required />
+                </div>
 
+                <div class="col"><label htmlFor=""><b>District : </b></label>
+                  <input type="text" name="district" required />
+              </div>
+              </div>
+              <br>
+              <br>
+              <div class="col"><label htmlFor=""><b>Name : </b></label>
+                <input type="text" name="name" required/>
+            </div>
+              <br>              
+              <br>
+
+              <div class="row">
+                
+                <div class="col-4"><label><b>Age : </b></label>
+                   
+                    <input type="string" name = "age" required/>
+                </div>
+
+                <div class="col"><label htmlFor=""><b>Contact : </b></label>
+                  <input type="text" name="contact" required/>
+                </div>
+
+                <div class="col"><label htmlFor=""><b>Education : </b></label>
+                  <input type="text" name="education" required/>
+                </div>
+              </div>
+              <br>
+          
+         
+          <label ><b>Gender : </b></label>
+          <br />
+          <div class="row">
+            <div class="col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="gender1" name="gender" value="Male" required />
+                    <label class="form-check-label" for="gender1">Male</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="gender2" name="gender" value="Female" required />
+                    <label class="form-check-label" for="gender2">female</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="gender3" name="gender" value="Other" required/>
+                    <label class="form-check-label" for="gender3">Others</label>
+                </div>
+            </div>
+        </div>
+
+          <br></br>
+
+          <div class="col"><label htmlFor=""><b>Monthly income of family : </b></label>
+            <input type="text" name="income" required/>
+          </div>
+          <br>
+          <br>
+          <label><b>Chief Complaint</b></label>
+          <br />
+          <div class="col-"><input type="text"name = "complaint" /></div>
+          <br />
+          <br>
+          <label ><b><u>Past Medical History</u></b></label>
+          <br />
+
+          <br><br/>
+          <div class="form-group">
+            <label for="diabetes">Diabetes</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Diabetes" value="Yes" required/>
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Diabetes" value="No" required/>
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="hyperTension">HyperTension</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="HyperTension" value="Yes" required/>
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="HyperTension" value="No" required/>
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="thyroid">Thyroid disorders</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Thyroid" value="Yes" required/>
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Thyroid" value="No" required/>
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
           </div>
           
-          <label htmlFor="">Others:</label>
-          <br />
-          <textarea rows="4" cols="50" form="usrform" name="others"></textarea>
+          <br>
+        
+          <div class="form-group">
+            <label for="cardiovascular">Cardiovascular diseases</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Cardiovascular" value="Yes" required/>
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Cardiovascular" value="No" required/>
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="respiratory">Respiratory diseases</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Respiratory" value="Yes" required/>
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Respiratory" value="No" required/>
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
+          <br>
+     
+          <div class="form-group">
+            <label for="bleeding">Bleeding disorders</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Bleeding" value="Yes" required/>
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Bleeding" value="No" required/>
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-2"><label htmlFor="">Others:</label></div>
+            <div class="col-"><input type="text" name="Others_past" /></div>
+            
+        </div>
+        <br>
+        <br>
+
+          <div class="form-group">
+            <label for="visit"><b>Past Dental Visit</b></label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="visit" value="Yes" required/>
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="visit" value="No" required/>
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="smoking"><b><u>Personal Habits</u></b></label>
+            <br>
+            <br>
+            <label for="smoking">Smoking</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="smoking-yes" name="Smoking" value="Yes" />
+              <label class="form-check-label" for="smoking-yes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="smoking-no" name="Smoking" value="No" />
+              <label class="form-check-label" for="smoking-no">No</label>
+            </div>
+            <br>
+            <label for="alcohol">Alcohol</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="alcohol-yes" name="Alcohol" value="Yes" />
+              <label class="form-check-label" for="alcohol-yes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="alcohol-no" name="Alcohol" value="No" />
+              <label class="form-check-label" for="alcohol-no">No</label>
+            </div>
+            <br>
+            <label for="nothing">Smokeless Tabacco</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="nothing-yes" name="smokeless" value="Yes" />
+              <label class="form-check-label" for="nothing-yes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="nothing-no" name="smokeless" value="No" />
+              <label class="form-check-label" for="nothing-no">No</label>
+            </div>
+            <br>
+            
+
+            <div class="row">
+              <div class="col-2"><label htmlFor="">Others:</label></div>
+              <div class="col-"><input type="text" name="Others_habits" /></div>
+              
+          </div>
+          </div>
+          
+          <br>
+          <br>
+
+          <div class="row">
+
+            <br>
+            <br>
+            <label for="smoking"><b><u>Clinical Examination</u></b></label>
+            <br>
+            <div class="row">
+                <div class="col-2"><label htmlFor="">Decayed:</label></div>
+                <div class="col-"><input type="text" name="decayed"  /></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+                <div class="col-2"><label htmlFor="">Missing:</label></div>
+                <div class="col-"><input type="text" name="missing" /></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+                <div class="col-2"><label htmlFor="">Filled:</label></div>
+                <div class="col-"><input type="text" name = "filled" /></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+                <div class="col-2"><label htmlFor="">Pain:</label></div>
+                <div class="col-"><input type="text" name="pain" /></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+                <div class="col-2"><label htmlFor="">Fractured teeth:</label></div>
+                <div class="col-"><input type="text" name="fractured" /></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+                <div class="col-2"><label htmlFor="">Mobility:</label></div>
+                <div class="col-"><input type="text" name="mobility" /></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+              <div class="col-2"><label htmlFor="">Others:</label></div>
+              <div class="col-"><input type="text" name="Others" /></div>
+              
+          </div>
+
+          </div>
           <br />
           <br />
           <div class="row">
-            <div class="col-2"><label htmlFor="">Gingiva</label></div>
-            <div class="col"><select id="history" name="gingiva">
-                <option value="Calculus">Calculus:</option>
-                <option value="Stains">Stains:</option>
-                <option value="Generalized chronic gingivitis">Generalized chronic gingivitis:</option>
-                <option value="periodontitis">
-                  Generalized chronic periodontitis:
-                </option>
-                <option value="others">Others:</option>
-              </select></div>
+            <div class="col-2"><label htmlFor=""><b><u>Gingiva</u></b></label></div>
           </div>
+          <br>
+
+          <div class="form-group">
+            <label for="calculus">Calculus:</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" name="Calculus" id="calculusYes" value="Yes" required>
+              <label class="form-check-label" for="calculusYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" name="Calculus" id="calculusNo" value="No" required>
+              <label class="form-check-label" for="calculusNo">No</label>
+            </div>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="stains">Stains:</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="stainsYes" name="Stains" value="Yes" required>
+              <label class="form-check-label" for="stainsYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="stainsNo" name="Stains" value="No" required>
+              <label class="form-check-label" for="stainsNo">No</label>
+            </div>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="gingivitis">Chronic gingivitis:</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="gingivitis" value="Localized" required>
+              <label class="form-check-label" for="visit1">Localized</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="gingivitis" value="Generalised" required>
+              <label class="form-check-label" for="visit2">Generalised</label>
+            </div>
+          </div>
+          <br>
           
+          <div class="form-group">
+            <label for="periodontitis">Chronic periodontitis:</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="periodontitis" value="Localized" required/>
+              <label class="form-check-label" for="visit1">Localized</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="periodontitis" value="Generalised" required/>
+              <label class="form-check-label" for="visit2">Generalised</label>
+            </div>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="dentalFluorosis"><b>Dental Fluorosis</b></label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="floro" value="Yes" required>
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="floro" value="No" required>
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="malo"><b>Malocclusion</b></label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="malo" id="maloYes" value="Yes" required>
+              <label class="form-check-label" for="maloYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="malo" id="maloNo" value="No" required>
+              <label class="form-check-label" for="maloNo">No</label>
+            </div>
+          </div>
+          <br>
           
+
+          <div class="form-group">
+            <label for="oralMucosalLesion"><b>Oral mucosal lesion</b></label>
+            <div class="row">
+              <div class="col-"><input type="text" name="masc" /></div>
+            </div>
+
+          </div>
+          <br>
+
+          <br>
+          <label htmlFor=""><b>Method of cleaning teeth </b></label>
+          <br />
+          <select id="history" name="cleaning" required>
+            <option value="toothbrush and paste">toothbrush and paste:</option>
+            <option value="Finger">Finger:</option>
+            <option value="tooth powder">tooth powder</option>
+            <option value="natural stick">natural stick</option>
+            <option value="Others:">Others:</option>
+          </select>
+          <div class="row">
+            <div class="col-2"><label htmlFor="">Others:</label></div>
+            <div class="col-"><input type="text" name="Others_method" /></div>
+            
+        </div>
+          <br />
+          <br>
           
-          <br />
-          <label htmlFor="">Description</label>
-          <br />
-          <textarea rows="4" cols="50" name="comment" form="usrform" ></textarea>
-          <br />
+
+
           <br>
-          <label htmlFor="">Dental Fluorosis</label>
+          <div class="row">
+            <div class="col-2"><label><b>Doctor's Name :</b></label></div>
+            <div class="col-"><input type="text"name = "doctors_name" required/></div>
+        </div>
+        <br>
+        <br>
+          <label htmlFor=""><b>Treatment Plan</b></label>
           <br />
-          <input type="radio" id="visit1" name="floro" value="Yes" />
-          <label for="visit1">Yes</label>
-          <br />
-          <input type="radio" id="visit2" name="floro" value="NO" />
-          <label for="visit2">No</label>
-          <br />
-          <br>
-          <label htmlFor="">Malocclusion</label>
-          <br />
-          <input type="radio" id="visit1" name="malo" value="Yes" />
-          <label for="visit1">Yes</label>
-          <br />
-          <input type="radio" id="visit2" name="malo" value="No" />
-          <label for="visit2">No</label>
-          <br />
-          <br>
-          <label htmlFor="">Oral mucosal lesion</label>
-          <br />
-          <input type="radio" id="visit1" name="masc" value="Yes" />
-          <label for="visit1">Yes</label>
-          <br />
-          <input type="radio" id="visit2" name="masc" value="No" />
-          <label for="visit2">No</label>
-          <br />
-          <br>
-          <label htmlFor="">Condition</label>
-          <br />
-          <textarea rows="4" cols="50" name="condition" form="usrform" ></textarea>
-          <br />
-          <br>
-          <label htmlFor="">Location</label>
-          <br />
-          <textarea rows="4" cols="50" name="location" form="usrform" ></textarea>
-          <br />
-          <label htmlFor="">Treatment done</label>
-          <br />
-          <select id="history" name="treatment">
-            <option value="Diabetes">Medication:</option>
-            <option value="Hypertention">Referral:</option>
-            <option value="Thyroid">Scaling:</option>
-            <option value="Cardiovascular">Extraction:</option>
-            <option value="Respiratory">Filling:</option>
+          <select id="history" name="treatment" required>
+            <option value="Medication:">Medication:</option>
+            <option value="Referral:">Referral:</option>
+            <option value="Scaling:">Scaling:</option>
+            <option value="Extraction:">Extraction:</option>
+            <option value="Filling:">Filling:</option>
+            <option value="Nil:">Nil:</option>
+            <option value="Others:">Others:</option>
           </select>
           <br />
           <br>
-          <textarea rows="4" cols="50" name="explanation" form="usrform" ></textarea>
+          <div class="col-"><input type="text"name = "explanation" /></div>
           <br />
           <br>
           <br>
-          <!-- <input class="submit" type="submit" value="Submit"></input> -->
-          <button type="submit"> Submit </button>
+          <button type="submit" style="width: 100%; color: rgb(249, 252, 251); background-color:  rgb(18, 103, 103);"> Submit </button>
         </div>
       </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script>
+    function toggleOrganisedByInput() {
+      var select = document.getElementById("history");
+      var organisedByInput = document.getElementById("Organised_By");
+  
+      if (select.value === "Others") {
+        organisedByInput.style.display = "block";
+      } else {
+        organisedByInput.style.display = "none";
+      }
+    }
+    </script>
 </body>
 </html>

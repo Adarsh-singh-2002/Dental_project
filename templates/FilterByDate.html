@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date Range Filter</title>
+    <style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #f2f2f2;
+			margin: 0;
+		}
+		.container {
+			margin: 20px;
+			max-width: 800px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			box-sizing: border-box;
+		}
+		form {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgb(18, 103, 103);
+			max-width: 500px;
+			margin: 20px auto;
+			box-sizing: border-box;
+		}
+		input[type="submit"],button {
+			background-color:rgb(18, 103, 103);
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 10px;
+			box-sizing: border-box;
+		}
+		input[type="submit"]:hover {
+			background-color: rgb(18, 103, 103);
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+			width: 100%;
+		}
+		input[type="date"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			margin-bottom: 20px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+		h1 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		
+		/* Media queries */
+		@media (max-width: 768px) {
+			.container {
+				margin: 10px;
+			}
+			form {
+				padding: 10px;
+			}
+			label {
+				margin-bottom: 5px;
+			}
+			input[type="date"],
+			input[type="submit"] {
+				padding: 8px 16px;
+				margin-top: 5px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1 style="color: rgb(29, 145, 97);">Date Range Filter</h1>
+	<form action="/filter" method="post">
+		<label for="start_date">Start Date:</label>
+		<input type="date" id="start_date" name="start_date" required>
+		<br><br>
+		<label for="end_date">End Date:</label>
+		<input type="date" id="end_date" name="end_date" required>
+		<br><br>
+		<label for="gender">Gender:</label>
+			<select id="gender" name="gender">
+				<option value="">-- Select Gender --</option>
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+				<option value="Other">Other</option>
+			</select>
+		<input type="submit" value="Filter">
+		<button type="submit" name="download_csv" value="true">Download CSV</button>
+	</form>
+</body>
+</html>

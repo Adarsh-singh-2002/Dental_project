@@ -5,9 +5,7 @@
 
 > Storing patient data and downloading it anywhere
 
-<p align="center">
 <img src ="https://github.com/Adarsh-singh-2002/Dental_project/assets/98600091/436bcf0b-1321-4d69-8bf3-a9aa335db3e5" width = "250px" height = "250px"/>
-</p>
 
 >>Very useful to maintain data and access it 
 
